@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SECONDVIBE - Sepatu Second Branded Berkualitas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background-color: #8b6f47;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 1.2rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #8b6f47;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f5f3ef;
+        }
+
+        .nav-cta {
+            padding: 10px 24px;
+            background: #1a1a1a;
+            color: #fff;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .nav-cta:hover {
+            background: #8b6f47;
+            color: #fff;
+        }
+
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 140px 5% 100px; /* JARAK DARI NAVBAR */
+            background: #fff;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.8rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -2px;
+            color: #1a1a1a;
+        }
+
+        .hero-content .highlight {
+            color: #8b6f47;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-primary {
+            padding: 16px 40px;
+            background: #1a1a1a;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #8b6f47;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .btn-secondary {
+            padding: 16px 40px;
+            background: transparent;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid #1a1a1a;
+            border-radius: 4px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        .hero-image {
+            position: relative;
+            height: 500px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-image::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to right,
+                rgba(0,0,0,0.35),
+                rgba(0,0,0,0.05)
+            );
+        }
+
+
+        /* Stats Section */
+        .stats {
+            padding: 60px 5%;
+            background: #8b6f47;
+            border-top: 1px solid #f0f0f0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .stats-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #080808;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            color: #080808;
+            font-size: 0.95rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 5%;
+            background: #fafafa;
+        }
+
+        .features-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+            color: #1a1a1a;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: #8b6f47;
+            padding: 40px 30px;
+            border-radius: 8px;
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            border-color: #0b0b0b;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .feature-card p {
+            color: #121111;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 100px 5%;
+            background: #fff;
+        }
+
+        .products-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .product-card {
+            background: #8b6f47;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+            transform: translateY(-8px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 320px;
+            background: #fafafa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            border-bottom: 1px solid #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #8b6f47;
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .product-info {
+            padding: 25px;
+        }
+
+        .product-brand {
+            font-size: 0.85rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .product-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .product-price {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 1.2rem;
+        }
+
+        .product-price span {
+            font-size: 0.9rem;
+            color: #999;
+            text-decoration: line-through;
+            margin-left: 10px;
+            font-weight: 400;
+        }
+
+        .btn-product {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-product:hover {
+            background: #8b6f47;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 5%;
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        .testimonials-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .testimonials .section-header h2 {
+            color: #fff;
+        }
+
+        .testimonials .section-header p {
+            color: #999;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: #2a2a2a;
+            padding: 35px;
+            border-radius: 8px;
+            border: 1px solid #3a3a3a;
+            transition: all 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            border-color: #8b6f47;
+        }
+
+        .testimonial-rating {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .testimonial-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #ddd;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #8b6f47;
+        }
+
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 5%;
+            background: #8b6f47;
+            text-align: center;
+            color: #fff;
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-whatsapp {
+            padding: 16px 40px;
+            background: #25d366;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1fb855;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-white {
+            background: #fff;
+            color: #8b6f47;
+        }
+
+        .btn-white:hover {
+            background: #f5f5f5;
+            color: #8b6f47;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 80px 5% 30px;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 50px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .footer-brand h3 span {
+            color: #8b6f47;
+        }
+
+        .footer-brand p {
+            color: #999;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: #2a2a2a;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #8b6f47;
+            transform: translateY(-3px);
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section ul li a {
+            color: #999;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: #8b6f47;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #2a2a2a;
+            padding-top: 30px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .btn-beli {
+            display: inline-block;
+            padding: 10px 18px;
+            background-color: #080808; /* warna WA */
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+            }
+
+            .btn-beli:hover {
+            background-color: #080808;
+            }
+
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .products-grid,
+            .features-grid,
+            .testimonials-grid,
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/083869379616?text=Halo%20SECONDVIBE,%20saya%20ingin%20bertanya%20tentang%20produk" class="whatsapp-float" target="_blank">💬</a>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">SECOND<span>VIBE</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Produk</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#contact" class="nav-cta">Hubungi Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Sepatu <span class="highlight">Second Branded</span>, Kualitas Premium</h1>
+                <p>Koleksi sneakers original dari Nike, Adidas, Converse, Vans dan brand ternama lainnya. Kondisi layak pakai, harga bersahabat, 100% authentic.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn-primary">Lihat Koleksi</a>
+                    <a href="#about" class="btn-secondary">Tentang Kami</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/Hero_Sepatu.jpg" alt="Sepatu Second Branded SECONDVIBE">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>500+</h3>
+                <p>Produk Terjual</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Original Guarantee</p>
+            </div>
+            <div class="stat-item">
+                <h3>300+</h3>
+                <p>Customer Puas</p>
+            </div>
+            <div class="stat-item">
+                <h3>4.9★</h3>
+                <p>Rating Toko</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="about">
+        <div class="features-container">
+            <div class="section-header">
+                <h2>Mengapa Pilih SECONDVIBE?</h2>
+                <p>Kami berkomitmen memberikan pengalaman terbaik untuk setiap pelanggan</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">✓</span>
+                    <h3>100% Original</h3>
+                    <p>Semua produk dijamin keasliannya dari brand resmi</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">⭐</span>
+                    <h3>Kondisi Premium</h3>
+                    <p>Hanya menjual sepatu dengan kondisi masih sangat layak pakai</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💰</span>
+                    <h3>Harga Terjangkau</h3>
+                    <p>Dapatkan branded shoes dengan harga ramah kantong</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🧼</span>
+                    <h3>Sudah Dibersihkan</h3>
+                    <p>Setiap sepatu sudah dicek dan dibersihkan dengan teliti</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="products-container">
+            <div class="section-header">
+                <h2>Koleksi Terbaru</h2>
+                <p>Pilihan sepatu branded berkualitas dengan harga spesial</p>
+            </div>
+            <div class="products-grid">
+
+            <!-- 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Like New</span>
+                    <img src="images/Puma_Red.jpg" alt="Puma Red">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">Puma</div>
+                    <h3>Puma Red</h3>
+                    <div class="product-price">Rp 950.000 <span>Rp 1.900.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Excellent</span>
+                    <img src="images/Puma_Black.jpg" alt="Puma Black ">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">Puma</div>
+                    <h3>Puma Black</h3>
+                    <div class="product-price">Rp 950.000 <span>Rp 1.900.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Very Good</span>
+                    <img src="images/Puma_Cokelat.jpg" alt="Puma Cokelat">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">Puma</div>
+                    <h3>Puma Cokelat</h3>
+                    <div class="product-price">Rp 1.050.000 <span>Rp 1.900.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Excellent</span>
+                    <img src="images/Adidas-Samba_Black.jpg" alt="Adidas Samba">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">Adidas</div>
+                    <h3>Adidas Samba Black</h3>
+                    <div class="product-price">Rp 350.000 <span>Rp 800.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Like New</span>
+                    <img src="images/Adidas_Samba_Blue.jpg" alt="Adidas Samba">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">Adidas</div>
+                    <h3>Adidas Samba Blue</h3>
+                    <div class="product-price">Rp 350.000 <span>Rp 800.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Very Good</span>
+                    <img src="images/Adidas_Samba_Pink.jpg" alt="Adidas Samba">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">Adidas</div>
+                    <h3>Adidas Samba Pink</h3>
+                    <div class="product-price">Rp 350.000 <span>Rp 800.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Excellent</span>
+                    <img src="images/Adidas_Campus_OG_White.jpg" alt="Adidas Samba OG">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">Adidas</div>
+                    <h3>Adidas Samba OG White</h3>
+                    <div class="product-price">Rp 450.000 <span>Rp 900.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Very Good</span>
+                    <img src="images/Adidas_Samba_OG_Black.jpg" alt="Adidas Samba OG">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">Adidas</div>
+                    <h3>Adidas Samba OG Black</h3>
+                    <div class="product-price">Rp 400.000 <span>Rp 900.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Like New</span>
+                    <img src="images/Vans_Old_School.jpg" alt="Vans Old School">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">Vans</div>
+                    <h3>Vans Old School</h3>
+                    <div class="product-price">Rp 300.000 <span>Rp 700.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Excellent</span>
+                    <img src="images/New_Balance_2002R_Pink.jpg" alt="New Balance">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">New Balance</div>
+                    <h3>New Balance 200R Pink</h3>
+                    <div class="product-price">Rp 490.000 <span>Rp 1.000.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Like New</span>
+                    <img src="images/New_Balance_2002R.jpg" alt="New Balance 200R">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">New Balance</div>
+                    <h3>New Balance 200R Grey</h3>
+                    <div class="product-price">Rp 450.000 <span>Rp 1.000.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Very Good</span>
+                    <img src="images/New_Balance_530.jpg" alt="New Balance 530">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">New Balance</div>
+                    <h3>New Balance 530</h3>
+                    <div class="product-price">Rp 400.000 <span>Rp 950.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 13 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Excellent</span>
+                    <img src="images/Nike_Air_Max_Plus_Black.jpg" alt="Nike Air Max">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">Nike</div>
+                    <h3>Nike Air Max Plus Black</h3>
+                    <div class="product-price">Rp 550.000 <span>Rp 1.000.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 14 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Very Good</span>
+                    <img src="images/Nike_Air_Max_Plus_TN.jpg" alt="Nike Air Maxc">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">Nike</div>
+                    <h3>Nike Air Max Plus TN</h3>
+                    <div class="product-price">Rp 400.000 <span>Rp 950.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 15 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Excellent</span>
+                    <img src="images/Asics_Gel_Kayano_14.jpg" alt="Asics Gel Kayano">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">Asics</div>
+                    <h3>Asics Gel kayano 14</h3>
+                    <div class="product-price">Rp 650.000 <span>Rp 1.200.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 16 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Like New</span>
+                    <img src="images/Asics_Gel_Kayano.jpg" alt="Asics Gel Kayano">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">Asics</div>
+                    <h3>Asics Gel Kayano</h3>
+                    <div class="product-price">Rp 500.000 <span>Rp 800.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 17 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Excellent</span>
+                    <img src="images/Asics_Gel_1130.jpg" alt="Asics Gel">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">Asics</div>
+                    <h3>Asics Gel 1130</h3>
+                    <div class="product-price">Rp 350.000 <span>Rp 900.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 18 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Very Good</span>
+                    <img src="images/Onitsuka_Tiger_Mexico_66.jpg" alt="Onitsuka Tiger">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">Onitsuka</div>
+                    <h3>Onitsuka Tiger Mexico 66</h3>
+                    <div class="product-price">Rp 650.000 <span>Rp 1.000.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 19 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Very Good</span>
+                    <img src="images/Adizero_Evo_SL.jpg" alt="ADIZERO evo SL">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">ADIZERO</div>
+                    <h3>ADIZERO evo SL</h3>
+                    <div class="product-price">Rp 550.000 <span>Rp 1.000.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 20 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Excellent</span>
+                    <img src="images/NB_Stone_Island.jpg" alt="NB Stone Island">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">New Balance</div>
+                    <h3>NB Stone Island</h3>
+                    <div class="product-price">Rp 600.000 <span>Rp 1.200.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+
+            <!-- 21 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Excellent</span>
+                    <img src="images/Adidas_Samba_Maroon.jpg" alt="Adidas Samba">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">Adidas</div>
+                    <h3>adidas Samba Maroon</h3>
+                    <div class="product-price">Rp 600.000 <span>Rp 1.200.000</span></div>
+                    <a 
+                        href="https://wa.me/083869379616?text=Saya%20mau%20beli%20sepatu%20ini"
+                        class="btn-beli"
+                        target="_blank"
+                        >
+                        Beli Sekarang
+                        </a>
+                </div>
+            </div>
+          </div>
+
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="testimonials-container">
+            <div class="section-header">
+                <h2>Apa Kata Mereka?</h2>
+                <p>Testimoni dari pelanggan yang sudah berbelanja di SECONDVIBE</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Sepatu yang saya beli kondisinya masih bagus banget! Adminnya juga ramah dan respon cepat. Pasti bakal order lagi!"</p>
+                    <p class="testimonial-author">Budi Santoso</p>
+                    <p class="testimonial-role">Jakarta</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Harga terjangkau tapi kualitas ga kalah sama yang baru. Cocok banget buat mahasiswa kaya aku yang pengen tampil keren!"</p>
+                    <p class="testimonial-author">Sarah Amelia</p>
+                    <p class="testimonial-role">Bandung</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"Trusted seller! Sepatu original, packingnya rapi, pengiriman cepat. Recommended banget deh SECONDVIBE!"</p>
+                    <p class="testimonial-author">Andi Pratama</p>
+                    <p class="testimonial-role">Surabaya</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <h2>Siap Upgrade Style Kamu?</h2>
+        <p>Jangan lewatkan koleksi sepatu branded berkualitas dengan harga spesial!</p>
+        <div class="cta-buttons">
+            <a href="https://wa.me/083869379616?text=Halo%20SECONDVIBE,%20saya%20ingin%20bertanya%20tentang%20produk" class="btn-whatsapp" target="_blank">
+                💬 Chat WhatsApp
+            </a>
+            <a href="#products" class="btn-primary btn-white">Lihat Semua Produk</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>SECOND<span>VIBE</span></h3>
+                <p>Toko online terpercaya untuk sepatu second branded berkualitas premium dengan harga terjangkau.</p>
+                <div class="social-links">
+                    <a href="#" target="_blank">📷</a>
+                    <a href="#" target="_blank">📘</a>
+                    <a href="#" target="_blank">🐦</a>
+                    <a href="#" target="_blank">📺</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Produk</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kategori</h4>
+                <ul>
+                    <li><a href="#">Nike
