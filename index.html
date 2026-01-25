@@ -11,11 +11,20 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --black: #0f0f0f;
+            --dark-black: #1a1a1a;
+            --orange: #ff6b00;
+            --orange-soft: #ff8c3a;
+            --white: #ffffff;
+            --gray: #999;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #1a1a1a;
-            background-color: #8b6f47;
+            background: var(--black);
+            color: var(--white);
         }
 
         html {
@@ -40,18 +49,32 @@
             align-items: center;
             max-width: 1400px;
             margin: 0 auto;
+            
         }
 
         .logo {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #1a1a1a;
-            letter-spacing: -0.5px;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 10px rgba(255,107,0,0.25);
         }
 
         .logo span {
-            color: #8b6f47;
+            color: var(--orange);
         }
+
+        nav {
+            background: #0f0f0f;
+            border-bottom: 1px solid #1f1f1f;
+        }
+        .nav-links a,
+        .logo {
+            color: #ffffff;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
 
         .nav-links {
             display: flex;
@@ -61,7 +84,7 @@
         }
 
         .nav-links a {
-            color: #1a1a1a;
+            color: #ffffff;
             text-decoration: none;
             font-size: 0.95rem;
             font-weight: 500;
@@ -69,19 +92,19 @@
         }
 
         .nav-links a:hover {
-            color: #f5f3ef;
+            color: var(--orange);
         }
 
         .nav-cta {
             padding: 10px 24px;
-            background: #1a1a1a;
+            background: var(--orange);
             color: #fff;
             border-radius: 4px;
             transition: all 0.3s;
         }
 
         .nav-cta:hover {
-            background: #8b6f47;
+            background: var(--orange-soft);
             color: #fff;
         }
 
@@ -152,7 +175,7 @@
 
         .btn-primary {
             padding: 16px 40px;
-            background: #1a1a1a;
+            background: var(--orange);
             color: #fff;
             text-decoration: none;
             font-weight: 600;
@@ -163,7 +186,7 @@
         }
 
         .btn-primary:hover {
-            background: #8b6f47;
+            background: var(--orange-soft);
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
@@ -184,6 +207,22 @@
         .btn-secondary:hover {
             background: #1a1a1a;
             color: #fff;
+        }
+
+        .hero {
+            background: var(--black);
+        }
+
+        .hero-content h1 {
+            color: #fff;
+        }
+
+        .hero-content p {
+            color: #ccc;
+        }
+
+        .hero-content .highlight {
+            color: var(--orange);
         }
 
         .hero-image {
@@ -215,7 +254,7 @@
         /* Stats Section */
         .stats {
             padding: 60px 5%;
-            background: #8b6f47;
+            background: #ff6b00;
             border-top: 1px solid #f0f0f0;
             border-bottom: 1px solid #f0f0f0;
         }
@@ -252,6 +291,10 @@
             margin: 0 auto;
         }
 
+        section {
+            color: #fff;
+        }
+
         .section-header {
             text-align: center;
             margin-bottom: 70px;
@@ -262,12 +305,12 @@
             font-weight: 700;
             margin-bottom: 1rem;
             letter-spacing: -1px;
-            color: #1a1a1a;
+            color: #fff;
         }
 
         .section-header p {
             font-size: 1.1rem;
-            color: #666;
+            color: #fff;
         }
 
         .features-grid {
@@ -277,12 +320,17 @@
         }
 
         .feature-card {
-            background: #8b6f47;
+            background: #ff6b00;
             padding: 40px 30px;
             border-radius: 8px;
-            border: 1px solid #f0f0f0;
+            border: 1px solid #000;
             transition: all 0.3s;
         }
+
+        .features {
+            background: var(--black);
+        }
+
 
         .feature-card:hover {
             transform: translateY(-8px);
@@ -304,15 +352,38 @@
         }
 
         .feature-card p {
-            color: #121111;
+            color: #ccc;
             font-size: 0.95rem;
             line-height: 1.6;
         }
 
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-up.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .zoom-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.8s ease;
+        }
+
+        .zoom-in.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+
         /* Products Section */
         .products {
             padding: 100px 5%;
-            background: #fff;
+            background: var(--black);
         }
 
         .products-container {
@@ -327,16 +398,17 @@
         }
 
         .product-card {
-            background: #8b6f47;
+            background: #ff6b00;
             border-radius: 8px;
             overflow: hidden;
-            border: 1px solid #f0f0f0;
+            border: 1px solid #080808;
             transition: all 0.3s;
+            
         }
 
         .product-card:hover {
             box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-            transform: translateY(-8px);
+            transform: translateY(-8px) scale(1.08);
         }
 
         .product-image {
@@ -350,19 +422,21 @@
             border-bottom: 1px solid #f0f0f0;
             position: relative;
             overflow: hidden;
+            
         }
 
         .product-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.5s ease;
         }
 
         .product-badge {
             position: absolute;
             top: 15px;
             left: 15px;
-            background: #8b6f47;
+            background: var(--orange);
             color: #fff;
             padding: 6px 14px;
             border-radius: 4px;
@@ -376,7 +450,7 @@
 
         .product-brand {
             font-size: 0.85rem;
-            color: #999;
+            color: #fff;
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 0.5rem;
@@ -393,7 +467,7 @@
         .product-price {
             font-size: 1.6rem;
             font-weight: 700;
-            color: #1a1a1a;
+            color: #fff;
             margin-bottom: 1.2rem;
         }
 
@@ -405,11 +479,31 @@
             font-weight: 400;
         }
 
+        .product-card::after {
+            content: "";
+            position: absolute;
+            inset: auto 0 0 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0,0,0,0.35), transparent);
+            opacity: 0;
+            transition: 0.3s;
+            pointer-events: none;
+        }
+
+        .product-card:hover::after {
+            opacity: 1;
+        }
+
+        .btn-secondary {
+            color: #fff;
+            border-color: #fff;
+        }
+
         .btn-product {
             display: block;
             width: 100%;
             padding: 14px;
-            background: #1a1a1a;
+            background: var(--orange);
             color: #fff;
             text-align: center;
             text-decoration: none;
@@ -419,7 +513,7 @@
         }
 
         .btn-product:hover {
-            background: #8b6f47;
+            background: var(--orange-soft);
         }
 
         /* Testimonials */
@@ -458,7 +552,7 @@
 
         .testimonial-card:hover {
             transform: translateY(-8px);
-            border-color: #8b6f47;
+            border-color: var(--orange);;
         }
 
         .testimonial-rating {
@@ -476,7 +570,7 @@
 
         .testimonial-author {
             font-weight: 600;
-            color: #8b6f47;
+            color: var(--orange);;
         }
 
         .testimonial-role {
@@ -487,7 +581,7 @@
         /* CTA Section */
         .cta-section {
             padding: 100px 5%;
-            background: #8b6f47;
+            background: linear-gradient(135deg, var(--orange), #ff4500);
             text-align: center;
             color: #fff;
         }
@@ -711,8 +805,27 @@
                 font-size: 1.5rem;
             }
         }
+        
     </style>
 </head>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.fade-up, .zoom-in').forEach(el => {
+        observer.observe(el);
+    });
+});
+</script>
+</script>
+
+
 <body>
     <!-- Floating WhatsApp -->
     <a href="https://wa.me/6283869379616?text=Halo%20SECONDVIBE,%20saya%20ingin%20bertanya%20tentang%20produk" class="whatsapp-float" target="_blank">💬</a>
@@ -733,7 +846,7 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-container">
-            <div class="hero-content">
+            <div class="hero-content fade-up">
                 <h1>Sepatu <span class="highlight">Second Branded</span>, Kualitas Premium</h1>
                 <p>Koleksi sneakers original dari Nike, Adidas, Converse, Vans dan brand ternama lainnya. Kondisi layak pakai, harga bersahabat, 100% authentic.</p>
                 <div class="hero-buttons">
@@ -778,22 +891,22 @@
                 <p>Kami berkomitmen memberikan pengalaman terbaik untuk setiap pelanggan</p>
             </div>
             <div class="features-grid">
-                <div class="feature-card">
+                <div class="feature-card fade-up">
                     <span class="feature-icon">✓</span>
                     <h3>100% Original</h3>
                     <p>Semua produk dijamin keasliannya dari brand resmi</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card fade-up">
                     <span class="feature-icon">⭐</span>
                     <h3>Kondisi Premium</h3>
                     <p>Hanya menjual sepatu dengan kondisi masih sangat layak pakai</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card fade-up">
                     <span class="feature-icon">💰</span>
                     <h3>Harga Terjangkau</h3>
                     <p>Dapatkan branded shoes dengan harga ramah kantong</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card fade-up">
                     <span class="feature-icon">🧼</span>
                     <h3>Sudah Dibersihkan</h3>
                     <p>Setiap sepatu sudah dicek dan dibersihkan dengan teliti</p>
@@ -812,7 +925,7 @@
             <div class="products-grid">
 
             <!-- 1 -->
-            <div class="product-card">
+            <div class="product-card zoom-in">
                 <div class="product-image">
                     <span class="product-badge">Like New</span>
                     <img src="images/Puma_Red.jpg" alt="Puma Red">
@@ -822,7 +935,7 @@
                     <h3>Puma Red</h3>
                     <div class="product-price">Rp 950.000 <span>Rp 1.900.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20Puma Red"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -842,7 +955,7 @@
                     <h3>Puma Black</h3>
                     <div class="product-price">Rp 950.000 <span>Rp 1.900.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20Puma Black"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -862,7 +975,7 @@
                     <h3>Puma Cokelat</h3>
                     <div class="product-price">Rp 1.050.000 <span>Rp 1.900.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20Puma Cokelat"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -882,7 +995,7 @@
                     <h3>Adidas Samba Black</h3>
                     <div class="product-price">Rp 350.000 <span>Rp 800.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20Adidas Samba Black"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -902,7 +1015,7 @@
                     <h3>Adidas Samba Blue</h3>
                     <div class="product-price">Rp 350.000 <span>Rp 800.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20Adidas Samba Blue"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -922,7 +1035,7 @@
                     <h3>Adidas Samba Pink</h3>
                     <div class="product-price">Rp 350.000 <span>Rp 800.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20Adidas Samba Pink"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -942,7 +1055,7 @@
                     <h3>Adidas Samba OG White</h3>
                     <div class="product-price">Rp 450.000 <span>Rp 900.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20Adidas Samba OG White"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -962,7 +1075,7 @@
                     <h3>Adidas Samba OG Black</h3>
                     <div class="product-price">Rp 400.000 <span>Rp 900.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20Adidas Samba OG Black"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -982,7 +1095,7 @@
                     <h3>Vans Old School</h3>
                     <div class="product-price">Rp 300.000 <span>Rp 700.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20Vans Old School"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -1002,7 +1115,7 @@
                     <h3>New Balance 200R Pink</h3>
                     <div class="product-price">Rp 490.000 <span>Rp 1.000.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20New Balance 200R Pink"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -1022,7 +1135,7 @@
                     <h3>New Balance 200R Grey</h3>
                     <div class="product-price">Rp 450.000 <span>Rp 1.000.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20New Balance 200R Grey"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -1042,7 +1155,7 @@
                     <h3>New Balance 530</h3>
                     <div class="product-price">Rp 400.000 <span>Rp 950.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20New Balance 530"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -1062,7 +1175,7 @@
                     <h3>Nike Air Max Plus Black</h3>
                     <div class="product-price">Rp 550.000 <span>Rp 1.000.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20Nike Air Max Plus Black"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -1082,7 +1195,7 @@
                     <h3>Nike Air Max Plus TN</h3>
                     <div class="product-price">Rp 400.000 <span>Rp 950.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20Nike Air Max Plus TN"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -1102,7 +1215,7 @@
                     <h3>Asics Gel kayano 14</h3>
                     <div class="product-price">Rp 650.000 <span>Rp 1.200.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20Asics Gel kayano 14"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -1122,7 +1235,7 @@
                     <h3>Asics Gel Kayano</h3>
                     <div class="product-price">Rp 500.000 <span>Rp 800.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20Asics Gel Kayano"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -1142,7 +1255,7 @@
                     <h3>Asics Gel 1130</h3>
                     <div class="product-price">Rp 350.000 <span>Rp 900.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20Asics Gel 1130"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -1162,7 +1275,7 @@
                     <h3>Onitsuka Tiger Mexico 66</h3>
                     <div class="product-price">Rp 650.000 <span>Rp 1.000.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20Onitsuka Tiger Mexico 66"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -1182,7 +1295,7 @@
                     <h3>ADIZERO evo SL</h3>
                     <div class="product-price">Rp 550.000 <span>Rp 1.000.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ADIZERO evo SL"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -1202,7 +1315,7 @@
                     <h3>NB Stone Island</h3>
                     <div class="product-price">Rp 600.000 <span>Rp 1.200.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20NB Stone Island"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -1219,10 +1332,10 @@
                 </div>
                 <div class="product-info">
                     <div class="product-brand">Adidas</div>
-                    <h3>Adidas Samba Maroon</h3>
+                    <h3>adidas Samba Maroon</h3>
                     <div class="product-price">Rp 600.000 <span>Rp 1.200.000</span></div>
                     <a 
-                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20Adidas Samba Maroon"
+                        href="https://wa.me/6283869379616?text=Saya%20mau%20beli%20sepatu%20ini"
                         class="btn-beli"
                         target="_blank"
                         >
@@ -1300,6 +1413,4 @@
             <div class="footer-section">
                 <h4>Kategori</h4>
                 <ul>
-
                     <li><a href="#">Nike
-
